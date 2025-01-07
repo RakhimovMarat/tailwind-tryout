@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "courses/index"
   get "states/index"
   resources :users
   get "landing/index"
