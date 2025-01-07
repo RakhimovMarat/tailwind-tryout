@@ -2,5 +2,6 @@
   <p><h2><%= @counter %>. <%= @item.title %></h2></p>
   <p><h4><%= number_to_currency(@item.price, :unit => "€") %></h4></p>
   <p><h4><%= @item.location %></h4></p>
+  <p><%= render(DiscountComponent.new(item: @item)) %></p>
   <p><a href='#'><%= @notice %></a></p>
 </div>
