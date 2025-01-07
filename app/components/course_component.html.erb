@@ -1,5 +1,6 @@
-<div class=<%= content %>>
-  <h2><%= @course.title %></h2>
-  <h4><%= number_to_currency(@course.price, :unit => "€") %></h4>
-  <h4><%= @course.location %></h4>
+<div>
+  <p><h2><%= @counter %>. <%= @item.title %></h2></p>
+  <p><h4><%= number_to_currency(@item.price, :unit => "€") %></h4></p>
+  <p><h4><%= @item.location %></h4></p>
+  <p><a href='#'><%= @notice %></a></p>
 </div>
