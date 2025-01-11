@@ -1,8 +1,8 @@
-<div>
-  <p><h2><%= @counter %>. <%= @item.title %></h2></p>
-  <p><h4><%= number_to_currency(@item.price, :unit => "€") %></h4></p>
-  <p><h4><%= @item.location %></h4></p>
+<div class="space-y-4">
+  <p class="text-2xl font-semibold text-gray-800"><%= @counter %>. <%= @item.title %></p>
+  <p class="text-xl text-gray-800"><%= number_to_currency(@item.price, :unit => "€") %></p>
+  <p class="text-lg text-gray-800"><%= @item.location %></p>
   <p><%= render(DiscountComponent.new(item: @item)) %></p>
-  <p><%= EnrolleeComponent.new.total_enrollees(@item) %></p>
-  <p><a href='#'><%= @notice %></a></p>
+  <p class="text-gray-800"><%= EnrolleeComponent.new.total_enrollees(@item) %></p>
+  <p><a href="#" class="text-purple-600 hover:underline"><%= @notice %></a></p>
 </div>

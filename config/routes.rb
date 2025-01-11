@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "courses/index"
+  resources :courses, only: [ :index, :show ]
   get "states/index"
   resources :users
   get "landing/index"
