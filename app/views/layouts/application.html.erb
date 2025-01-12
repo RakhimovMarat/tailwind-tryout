@@ -24,7 +24,7 @@
   </head>
 
   <body>
-    <%= render(NavbarComponent.new) %>
+    <%= render NavbarComponent.new(links: navbar_links) %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
