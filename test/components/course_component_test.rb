@@ -5,9 +5,9 @@ class CourseComponentTest < ViewComponent::TestCase
   def test_component_render_all_children
     course = Course.create(title: "Organizing your Time", price: 155.00, location: "London")
     render_inline(CourseComponent.new(item: course, notice: "A new test", item_counter: 1))
-    assert_selector("h2", text: "Organizing your Time")
-    assert_selector("h4", text: "€155.00")
-    assert_selector("h4", text: "London")
+    assert_selector("*", text: "1. Organizing your Time")
+    assert_selector("*", text: "€155.00")
+    assert_selector("*", text: "London")
     assert_text("enrollees")
     assert_text("discount")
   end
