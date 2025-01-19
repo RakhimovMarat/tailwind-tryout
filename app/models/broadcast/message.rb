@@ -10,9 +10,9 @@ module Broadcast
 
     def append
       Turbo::StreamsChannel.broadcast_append_later_to(
-        :message,
+        :messages,
         target: "messages",
-        html: render_component
+        html: rendered_component
       )
     end
 
@@ -20,7 +20,7 @@ module Broadcast
 
     attr_reader :message
 
-    def render_component
+    def rendered_component
       ApplicationController.render(
         MessageComponent.new(message: message),
         layout: false
