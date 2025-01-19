@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "messages/index"
   get "states/index"
   resources :users
   get "landing/index"
