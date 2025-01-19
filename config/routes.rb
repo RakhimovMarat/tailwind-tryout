@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get "messages/index"
+  resources :messages
+  root "messages#index"
   get "states/index"
   resources :users
   get "landing/index"
