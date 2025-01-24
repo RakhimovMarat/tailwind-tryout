@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'link', to: 'demo#link'
+  post 'demo_submit', to: 'demo#submit', as: 'demo_submit'
+  root 'demo#index'
+
+
   get "states/index"
   resources :users
   get "landing/index"
