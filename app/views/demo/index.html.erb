@@ -1,0 +1,23 @@
+<div>  
+  <h1>Демонстрация Turbo</h1>
+  <br />
+
+  <div>
+    <p><a href="/link" data-turbo="true">Ссылка с Turbo</a></p>
+    <br />
+    <p><a href="/link" data-turbo="false">Ссылка без Turbo</a></p>
+  </div>
+  <br />
+  
+  <div>
+  <h2>Форма с Turbo</h2>
+    <%= form_with url: demo_submit_path, method: :post, data: { turbo: true } do %>
+      <%= submit_tag 'Отправить' %>
+    <% end %>
+    <br />
+    <h2>Форма без Turbo</h2>
+    <%= form_with url: demo_submit_path, method: :post, data: { turbo: false } do %>
+      <%= submit_tag 'Отправить' %>
+    <% end %>
+  </div>
+</div>
