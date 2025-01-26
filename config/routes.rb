@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "clipboards#index"
+  get "clipboards/index"
   get "states/index"
   resources :users
   get "landing/index"
