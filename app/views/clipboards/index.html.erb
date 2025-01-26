@@ -1,19 +1,35 @@
-<div>
-  <h1>Example: Copy to clipboard</h1>
-  <div data-controller="clipboard">
-    PIN: <input data-clipboard-target="source" type="text" value="1234" readonly>
-    <button data-action="clipboard#copy">Copy to Clipboard</button>
-    PIN: <input data-clipboard-target="source" type="text" value="this won't get copied" readonly>
-    <button data-action="clipboard#copy">Copy to Clipboard</button>
+<div class="space-y-6 p-6">
+  <h1 class="text-2xl font-semibold text-gray-800 mb-4">Example: Copy to clipboard</h1>
+  
+  <div data-controller="clipboard" class="space-y-6">
+    <div class="flex items-center space-x-4">
+      <label for="pin1" class="text-lg font-medium text-gray-700">PIN:</label>
+      <input id="pin1" data-clipboard-target="source" type="text" value="1234" readonly class="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
+      <button data-action="clipboard#copy" class="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400">Copy to Clipboard</button>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <label for="pin2" class="text-lg font-medium text-gray-700">PIN:</label>
+      <input id="pin2" data-clipboard-target="source" type="text" value="this won't get copied" readonly class="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
+      <button data-action="clipboard#copy" class="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400">Copy to Clipboard</button>
+    </div>
   </div>
-  <h1>More than one instance of the clipboard controller on the page</h1>
-  <div data-controller="clipboard">
-    PIN: <input data-clipboard-target="source" type="text" value="5678" readonly>
-    <button data-action="clipboard#copy">Copy to Clipboard</button>
+
+  <h1 class="text-2xl font-semibold text-gray-800 mb-4">More than one instance of the clipboard controller on the page</h1>
+  <div data-controller="clipboard" class="space-y-6">
+    <div class="flex items-center space-x-4">
+      <label for="pin3" class="text-lg font-medium text-gray-700">PIN:</label>
+      <input id="pin3" data-clipboard-target="source" type="text" value="5678" readonly class="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
+      <button data-action="clipboard#copy" class="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400">Copy to Clipboard</button>
+    </div>
   </div>
-  <h1>Use other HTML elements like link and textarea (instead of button and input)</h1>
-  <div data-controller="clipboard">
-    PIN: <textarea data-clipboard-target="source" readonly>3737</textarea>
-    <a href="#" data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</a>
+
+  <h1 class="text-2xl font-semibold text-gray-800 mb-4">Use other HTML elements like link and textarea (instead of button and input)</h1>
+  <div data-controller="clipboard" class="space-y-6">
+    <div class="flex items-center space-x-4">
+      <label for="pin4" class="text-lg font-medium text-gray-700">PIN:</label>
+      <textarea id="pin4" data-clipboard-target="source" readonly class="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">3737</textarea>
+      <a href="#" data-action="clipboard#copy" class="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400">Copy to Clipboard</a>
+    </div>
   </div>
 </div>
