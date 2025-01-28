@@ -1,35 +1,35 @@
-<div class="space-y-6 p-6">
-  <h1 class="text-2xl font-semibold text-gray-800 mb-4">Example: Copy to clipboard</h1>
+<div class="p-4 space-y-6">
+  <h1 class="text-xl font-bold">Example: Copy to clipboard</h1>
   
-  <div data-controller="clipboard" class="space-y-6">
+  <div data-controller="clipboard" class="space-y-4">
     <div class="flex items-center space-x-4">
-      <label for="pin1" class="text-lg font-medium text-gray-700">PIN:</label>
-      <input id="pin1" data-clipboard-target="source" type="text" value="1234" readonly class="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
-      <button data-action="clipboard#copy" class="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400">Copy to Clipboard</button>
+      <label class="text-base">PIN:</label>
+      <input data-clipboard-target="source" type="text" value="1234" readonly class="border p-1 rounded">
+      <button data-action="clipboard#copy" class="bg-teal-500 text-white px-3 py-1 rounded">Copy</button>
     </div>
 
     <div class="flex items-center space-x-4">
-      <label for="pin2" class="text-lg font-medium text-gray-700">PIN:</label>
-      <input id="pin2" data-clipboard-target="source" type="text" value="this won't get copied" readonly class="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
-      <button data-action="clipboard#copy" class="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400">Copy to Clipboard</button>
-    </div>
-  </div>
-
-  <h1 class="text-2xl font-semibold text-gray-800 mb-4">More than one instance of the clipboard controller on the page</h1>
-  <div data-controller="clipboard" class="space-y-6">
-    <div class="flex items-center space-x-4">
-      <label for="pin3" class="text-lg font-medium text-gray-700">PIN:</label>
-      <input id="pin3" data-clipboard-target="source" type="text" value="5678" readonly class="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
-      <button data-action="clipboard#copy" class="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400">Copy to Clipboard</button>
+      <label class="text-base">PIN:</label>
+      <input data-clipboard-target="source" type="text" value="this won't get copied" readonly class="border p-1 rounded">
+      <button data-action="clipboard#copy" class="bg-teal-500 text-white px-3 py-1 rounded">Copy</button>
     </div>
   </div>
 
-  <h1 class="text-2xl font-semibold text-gray-800 mb-4">Use other HTML elements like link and textarea (instead of button and input)</h1>
-  <div data-controller="clipboard" class="space-y-6">
+  <h1 class="text-xl font-bold">More than one instance of the clipboard controller on the page</h1>
+  <div data-controller="clipboard" class="space-y-4">
     <div class="flex items-center space-x-4">
-      <label for="pin4" class="text-lg font-medium text-gray-700">PIN:</label>
-      <textarea id="pin4" data-clipboard-target="source" readonly class="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">3737</textarea>
-      <a href="#" data-action="clipboard#copy" class="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400">Copy to Clipboard</a>
+      <label class="text-base">PIN:</label>
+      <input data-clipboard-target="source" type="text" value="5678" readonly class="border p-1 rounded">
+      <button data-action="clipboard#copy" class="bg-teal-500 text-white px-3 py-1 rounded">Copy</button>
+    </div>
+  </div>
+
+  <h1 class="text-xl font-bold">Use other HTML elements like link and textarea</h1>
+  <div data-controller="clipboard" class="space-y-4">
+    <div class="flex items-center space-x-4">
+      <label class="text-base">PIN:</label>
+      <textarea data-clipboard-target="source" readonly class="border p-1 rounded">3737</textarea>
+      <a href="#" data-action="clipboard#copy" class="bg-teal-500 text-white px-3 py-1 rounded">Copy</a>
     </div>
   </div>
 </div>
