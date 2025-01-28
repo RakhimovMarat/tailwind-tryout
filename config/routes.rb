@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "content_loaders", to: "content_loaders#index"
   get "slideshows", to: "slideshows#index"
   root "clipboards#index"
   get "clipboards/index"
