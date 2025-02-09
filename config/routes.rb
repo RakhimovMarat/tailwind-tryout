@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  get "buttons/index"
   resources :courses, only: [ :index, :show ]
   get "states/index"
   resources :users
   get "landing/index"
-  root "courses#index"
+  root "buttons#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
