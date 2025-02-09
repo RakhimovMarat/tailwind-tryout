@@ -7,7 +7,7 @@ module.exports = {
     './app/javascript/**/*.js',
     './app/views/**/*.{erb,haml,html,slim}',
     './app/components/*.{erb,rb}',
-    '../ui_components/app/components/**/*.{erb,rb}'
+    '../ui_components/app/components/ui_components/**/*.{erb,rb}'
   ],
   theme: {
     colors: {
